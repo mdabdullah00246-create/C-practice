@@ -162,7 +162,7 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    
+
     for (i = 0; i < num; i++)
     {
         int count = 1;
@@ -178,7 +178,12 @@ int main()
                 a[j]=-1;
             }
         }
+        if(count==1){
+            continue;
+        }
+        else{
         printf("%d occurs %d times\n", a[i], count);
+        }
     }
 
     return 0;
