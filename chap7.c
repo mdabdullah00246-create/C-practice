@@ -148,44 +148,61 @@ int main()
     // }
     // printf("the second largest number is %d",seclar);
 
-    int num;
-    printf("Enter number of elements=");
-    scanf("%d", &num);
+//     int num;
+//     printf("Enter number of elements=");
+//     scanf("%d", &num);
 
-    int a[num];
-    int i;
-    int j;
+//     int a[num];
+//     int i;
+//     int j;
     
 
-    printf("Enter Elements:\n");
+//     printf("Enter Elements:\n");
 
-    for (i = 0; i < num; i++)
-    {
-        scanf("%d", &a[i]);
-    }
+//     for (i = 0; i < num; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
 
-    for (i = 0; i < num; i++)
-    {
-        int count = 1;
-        if (a[i] == -1)
-        {
-            continue;
-        }
-        for (j = i + 1; j < num; j++)
-        {
-            if (a[j] == a[i])
-            {
-                count++;
-                a[j]=-1;
-            }
-        }
-        if(count==1){
-            continue;
-        }
-        else{
-        printf("%d occurs %d times\n", a[i], count);
+//     for (i = 0; i < num; i++)
+//     {
+//         int count = 1;
+//         if (a[i] == -1)
+//         {
+//             continue;
+//         }
+//         for (j = i + 1; j < num; j++)
+//         {
+//             if (a[j] == a[i])
+//             {
+//                 count++;
+//                 a[j]=-1;
+//             }
+//         }
+//         if(count==1){
+//             continue;
+//         }
+//         else{
+//         printf("%d occurs %d times\n", a[i], count);
 
-    }
+//     }
+// }
+
+int n;
+printf("Enter Number of elements: ");
+scanf("%d",&n);
+int a[n];
+int b[n];
+int i;
+printf("Enter elements : \n");
+for(i=0; i<n; i++){
+    scanf("%d",&a[i]);
 }
+printf("copied elements:\n");
+for(i=0; i<n; i++){
+    b[i]=a[i];
+    printf("%d\n",b[i]);
+}
+
     return 0;
 }
