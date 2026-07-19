@@ -61,7 +61,7 @@ int main()
     //     }
     // }
     // printf("%d is smallest",smallest);
-    
+
     // int n;
     // printf("Enter  number of numbers");
     // scanf("%d",&n);
@@ -82,7 +82,7 @@ int main()
     // }
     // printf("The Number of Even is %d\n",even);
     // printf("The Number of Odd is %d\n",odd);
-    
+
     // int num;
     // printf("Enter Number of elements=");
     // scanf("%d",&num);
@@ -122,32 +122,64 @@ int main()
     //     printf("%d\n",a[i]);
     // }
 
-    int lnum;
-    printf("Enter Number of Elements=");
-    scanf("%d",&lnum);
-    int a[lnum];
+    // int lnum;
+    // printf("Enter Number of Elements=");
+    // scanf("%d",&lnum);
+    // int a[lnum];
+    // int i;
+    // for(i=0; i<lnum; i++){
+    //     scanf("%d",&a[i]);
+    // }
+    // int lar=a[0];
+    // int seclar=a[0];
+    // for(i=0; i<lnum; i++){
+    //     if(a[i]>lar){
+    //         seclar=lar;
+    //         lar=a[i];
+    //     }
+    //     else if( a[i] > seclar && a[i] < lar ){
+    //          seclar=a[i];
+    //     }
+    //     else{
+    //        if(a[i]>seclar){
+    //         seclar=a[i];
+    //        }
+    //     }
+    // }
+    // printf("the second largest number is %d",seclar);
+
+    int num;
+    printf("Enter number of elements=");
+    scanf("%d", &num);
+
+    int a[num];
     int i;
-    for(i=0; i<lnum; i++){
-        scanf("%d",&a[i]);
-    }
-    int lar=a[0];
-    int seclar=a[0];
-    for(i=0; i<lnum; i++){
-        if(a[i]>lar){
-            seclar=lar;
-            lar=a[i];
-        }
-        else if( a[i] > seclar && a[i] < lar ){
-             seclar=a[i];
-        }
-        else{
-           if(a[i]>seclar){
-            seclar=a[i];
-           }
-        }
-    }
-    printf("the second largest number is %d",seclar);
+    int j;
 
+    printf("Enter Elements:\n");
 
-        return 0;
+    for (i = 0; i < num; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    
+    for (i = 0; i < num; i++)
+    {
+        int count = 1;
+        if (a[i] == -1)
+        {
+            continue;
+        }
+        for (j = i + 1; j < num; j++)
+        {
+            if (a[j] == a[i])
+            {
+                count++;
+                a[j]=-1;
+            }
+        }
+        printf("%d occurs %d times\n", a[i], count);
+    }
+
+    return 0;
 }
