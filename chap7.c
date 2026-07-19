@@ -108,19 +108,46 @@ int main()
     //     printf("Invalid Search!");
     // }
 
-    int rnum;
-    printf("Enter Number of elements=");
-    scanf("%d",&rnum);
+    // int rnum;
+    // printf("Enter Number of elements=");
+    // scanf("%d",&rnum);
 
-    int a[rnum];
+    // int a[rnum];
+    // int i;
+    // for(i=0; i<rnum; i++){
+    //     scanf("%d",&a[i]);
+    // }
+    // // int n;
+    // for(i=(rnum-1); i>=0; i--){
+    //     printf("%d\n",a[i]);
+    // }
+
+    int lnum;
+    printf("Enter Number of Elements=");
+    scanf("%d",&lnum);
+    int a[lnum];
     int i;
-    for(i=0; i<rnum; i++){
+    for(i=0; i<lnum; i++){
         scanf("%d",&a[i]);
     }
-    // int n;
-    for(i=(rnum-1); i>=0; i--){
-        printf("%d\n",a[i]);
+    int lar=a[0];
+    int seclar=a[0];
+    for(i=0; i<lnum; i++){
+        if(a[i]>lar){
+            seclar=lar;
+            lar=a[i];
+        }
+        else if( a[i] > seclar && a[i] < lar ){
+             seclar=a[i];
+        }
+        else{
+           if(a[i]>seclar){
+            seclar=a[i];
+           }
+        }
     }
+    printf("the second largest number is %d",seclar);
+
 
         return 0;
 }
