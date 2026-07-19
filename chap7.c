@@ -83,29 +83,43 @@ int main()
     // printf("The Number of Even is %d\n",even);
     // printf("The Number of Odd is %d\n",odd);
     
-    int num;
+    // int num;
+    // printf("Enter Number of elements=");
+    // scanf("%d",&num);
+    // int a[num];
+    // int i;
+    // for(i=0; i<num; i++){
+    //     scanf("%d",&a[i]);
+    // }
+    // int search;
+    // printf("Enter number of search=");
+    // scanf("%d",&search);
+    // int found=0;
+    // for(i=0; i<num; i++){
+    //     if(search==a[i]){
+    //         found++;
+    //         break;
+    //     }
+    // }
+    // if(found==1){
+    //     printf("%d found at index %d",a[i],i);
+    // }
+    // else{
+    //     printf("Invalid Search!");
+    // }
+
+    int rnum;
     printf("Enter Number of elements=");
-    scanf("%d",&num);
-    int a[num];
+    scanf("%d",&rnum);
+
+    int a[rnum];
     int i;
-    for(i=0; i<num; i++){
+    for(i=0; i<rnum; i++){
         scanf("%d",&a[i]);
     }
-    int search;
-    printf("Enter number of search=");
-    scanf("%d",&search);
-    int found=0;
-    for(i=0; i<num; i++){
-        if(search==a[i]){
-            found++;
-            break;
-        }
-    }
-    if(found==1){
-        printf("%d found at index %d",a[i],i);
-    }
-    else{
-        printf("Invalid Search!");
+    // int n;
+    for(i=(rnum-1); i>=0; i--){
+        printf("%d\n",a[i]);
     }
 
         return 0;
