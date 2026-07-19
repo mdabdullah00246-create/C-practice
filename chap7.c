@@ -46,21 +46,41 @@ int main()
     //     }
     // }
     // printf("Largest Number is %d", largest);
+    // int n;
+    // printf("Enter  Number of Numbers=");
+    // scanf("%d",&n);
+    // int a[n];
+    // int i;
+    // for(i=0; i<n; i++){
+    //     scanf("%d",&a[i]);
+    // }
+    //  int smallest=a[0];
+    // for(i=0; i<n; i++){
+    //     if(a[i]<smallest){
+    //         smallest=a[i];
+    //     }
+    // }
+    // printf("%d is smallest",smallest);
+    
     int n;
-    printf("Enter a Number of Numbers=");
+    printf("Enter  number of numbers");
     scanf("%d",&n);
     int a[n];
     int i;
     for(i=0; i<n; i++){
         scanf("%d",&a[i]);
     }
-     int smallest=a[0];
+    int odd=0;
+    int even=0;
     for(i=0; i<n; i++){
-        if(a[i]<smallest){
-            smallest=a[i];
+        if(a[i]%2==0){
+            even++;
+        }
+        else{
+            odd++;
         }
     }
-    printf("%d is smallest",smallest);
-
+    printf("The Number of Even is %d\n",even);
+    printf("The Number of Odd is %d\n",odd);
         return 0;
 }
