@@ -155,6 +155,7 @@ int main()
     int a[num];
     int i;
     int j;
+    
 
     printf("Enter Elements:\n");
 
@@ -183,8 +184,8 @@ int main()
         }
         else{
         printf("%d occurs %d times\n", a[i], count);
-        }
-    }
 
+    }
+}
     return 0;
 }
