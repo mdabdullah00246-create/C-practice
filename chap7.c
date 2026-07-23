@@ -204,7 +204,7 @@ int main()
 //     printf("%d\n",b[i]);
 // }
 // 
-int n1;
+/*int n1;
 printf("Enter size of first array:");
 scanf("%d",&n1);
 int a[n1];
@@ -230,6 +230,33 @@ printf("Merged Array\n");
 for(i = 0; i < n1 + n2; i++)
 {
     printf("%d\n", c[i]);
+}*/
+
+int n;
+printf("Enter the size of Array:");
+scanf("%d",&n);
+int a[n];
+int i;
+for(i=0; i<n; i++){
+    scanf("%d",&a[i]);
+}
+int position;
+printf("Positon:");
+scanf("%d",&position);
+int value;
+printf("Enter Value:");
+scanf("%d",&value);
+    if(position>=0 && position<=n)
+{
+    for(i=n; i>position; i--)
+    {
+        a[i] = a[i-1];
+    }
+    a[position] = value;
+    n++;
+} 
+for(i=0; i<n; i++){
+    printf("%d ",a[i]);
 }
     return 0;
 }
