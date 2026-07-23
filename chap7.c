@@ -188,21 +188,48 @@ int main()
 //     }
 // }
 
-int n;
-printf("Enter Number of elements: ");
-scanf("%d",&n);
-int a[n];
-int b[n];
+// int n;
+// printf("Enter Number of elements: ");
+// scanf("%d",&n);
+// int a[n];
+// int b[n];
+// int i;
+// printf("Enter elements : \n");
+// for(i=0; i<n; i++){
+//     scanf("%d",&a[i]);
+// }
+// printf("copied elements:\n");
+// for(i=0; i<n; i++){
+//     b[i]=a[i];
+//     printf("%d\n",b[i]);
+// }
+// 
+int n1;
+printf("Enter size of first array:");
+scanf("%d",&n1);
+int a[n1];
 int i;
-printf("Enter elements : \n");
-for(i=0; i<n; i++){
+for(i=0; i<n1; i++){
     scanf("%d",&a[i]);
 }
-printf("copied elements:\n");
-for(i=0; i<n; i++){
-    b[i]=a[i];
-    printf("%d\n",b[i]);
+int n2;
+printf("Enter size of second array:");
+scanf("%d",&n2);
+int b[n2];
+for(i=0; i<n2; i++){
+    scanf("%d",&b[i]);
 }
-
+int c[n1+n2];
+for(i=0; i<n1; i++){
+    c[i]=a[i];
+}
+for(i=0; i<n2; i++){
+    c[n1+i]=b[i];
+}
+printf("Merged Array\n");
+for(i = 0; i < n1 + n2; i++)
+{
+    printf("%d\n", c[i]);
+}
     return 0;
 }
