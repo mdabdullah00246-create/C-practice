@@ -259,7 +259,7 @@ for(i=0; i<n; i++){
     printf("%d ",a[i]);
 }*/
 
-int n;
+/*int n;
 printf("Enter size of Array:");
 scanf("%d",&n);
 int a[n];
@@ -270,7 +270,7 @@ for(i=0; i<n; i++){
 int position;
 printf("Position:");
 scanf("%d",&position);
-if(position>0 && position<n){
+if(position>=0 && position<n){
    for(i=position; i<n-1; i++){
     a[i] = a[i + 1];
 }
@@ -278,6 +278,34 @@ if(position>0 && position<n){
 }
 for(i=0; i<n; i++){
     printf("%d",a[i]);
+}*/
+
+int n;
+printf("Enter Size of array:");
+scanf("%d",&n);
+int a[n];
+int i;
+for(i=0; i<n; i++){
+    scanf("%d",&a[i]);
+}
+int swap=0;
+for(i=0; i<n-1; i++){
+    int j;
+    int temp;
+    for(j=0; j<n-i-1; j++){
+        if(a[j]>a[j+1]){
+        temp=a[j];
+        a[j]=a[j+1];
+        a[j+1]=temp;
+        swap=1;
+        }
+        if(swap == 0){
+        break;
+        }
+    }
+}
+for(i=0; i<n; i++){
+    printf("%d\n",a[i]);
 }
     return 0;
 }
